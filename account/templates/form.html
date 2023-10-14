@@ -1,0 +1,37 @@
+{%extends 'master.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--<link rel="stylesheet" href="../static/css/boost.css">-->
+{%block 'main'%}
+<h1><marquee>welcome to form page</marquee></h1>
+<h1> <u> <center> WELCOME TO HOME PAGE</center> </u></h1>
+<form class="bg-warning p-5" method="post">
+    {%csrf_token%}
+    <div class="mb-5">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" id="username" name="username">
+  </div>
+  <div class="mb-5">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email"  name="email" class="form-control" id="email" aria-describedby="emailHelp">
+<!--    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+  </div>
+  <div class="mb-5">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="password">
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+{%endblock%}
+</body>
+</html>

@@ -1,0 +1,26 @@
+{%extends 'master.html'%}
+
+
+{%block 'main'%}
+
+<h1> <u> <center> WELCOME TO Login Page</center> </u></h1>
+{%if msg%}
+<h3>{{msg}}</h3>
+
+{%endif%}
+<form  class="bg-danger p-5" method="post">
+    {%csrf_token%}
+    <div class="mb-5">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" id="username" name="uname">
+  </div>
+
+  <div class="mb-5">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="password">
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{%endblock%}

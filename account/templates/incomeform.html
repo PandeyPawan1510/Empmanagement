@@ -1,0 +1,35 @@
+{%extends 'master.html'%}
+
+{%block 'main'%}
+
+<center><h1 class="mt-2 mb-3" >Add income Details!!</h1></center>
+<form  class="bg-danger p-5" method="post" >
+    {%csrf_token%}
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Income Amount</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="inputEmail3" name="amt">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Income Type</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="inputPassword3" name="type">
+      </div>
+    </div>
+
+    <div class="form-floating row mb-3">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="description"></textarea>
+        <label for="floatingTextarea">Add description</label>
+    </div>
+
+    <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker row mb-3">
+        <label for="example">Date</label>
+        <input placeholder="Select date" type="date" id="example" class="form-control" name="date">
+
+        <i class="fas fa-calendar input-prefix"></i>
+      </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+{%endblock%}

@@ -1,0 +1,48 @@
+{%extends 'master.html'%}
+
+{%block 'main'%}
+<h1><center>Search Results!!</center></h1>
+
+<table class ="table">
+    <thead>
+    <tr>
+        <th>sr no</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Date</th>
+        <th scope="col">Amount Type</th>
+        <th scope="col">Description</th>
+        <th scope="col">Data</th>
+    </tr>
+    </thead>
+    <tbody>
+    {%for i in data1%}
+    <tr>
+        <th scope="row">{{i.id}}</th>
+        <td class="bg-success">{{i.income_amount}}</td>
+        <td class="bg-success">{{i.income_date}}</td>
+        <td class="bg-success">{{i.income_type}}</td>
+        <td class="bg-success">{{i.income_description}}</td>
+        <td class="bg-success">Income</td>
+    </tr>
+    {%endfor%}
+    <tr>
+        <tbody>
+    {%for i in data2%}
+    <tr>
+        <th scope="row">{{i.id}}</th>
+        <td class="bg-success">{{i.expense_amount}}</td>
+        <td class="bg-success">{{i.expense_date}}</td>
+        <td class="bg-success">{{i.expense_type}}</td>
+        <td class="bg-success">{{i.expense_description}}</td>
+        <td class="bg-success">Expense</td>
+    </tr>
+    {%endfor%}
+    </tbody>
+    </tr>
+    </tbody>
+</table>
+
+
+{%endblock%}
+
+
